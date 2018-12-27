@@ -1,0 +1,43 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - ObjectMapper (3.2.0)
+  - SKActivityIndicatorView (0.1.0)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - ObjectMapper (from `https://github.com/alecdoconnor/ObjectMapper.git`, branch `Swift-4.2`)
+  - SKActivityIndicatorView (~> 0.1.0)
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - SKActivityIndicatorView
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  ObjectMapper:
+    :branch: Swift-4.2
+    :git: https://github.com/alecdoconnor/ObjectMapper.git
+
+CHECKOUT OPTIONS:
+  ObjectMapper:
+    :commit: af7966b567860596fad270bb44b27f495cd8691d
+    :git: https://github.com/alecdoconnor/ObjectMapper.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  ObjectMapper: 5cccd2de6f253eda859df8116a5a554d9769e859
+  SKActivityIndicatorView: f46936f760d33eb8235333242269bf01cc9248ae
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: 89ce900bfa2479ed4627c7d7a39e6aa4731c694e
+
+COCOAPODS: 1.5.2
