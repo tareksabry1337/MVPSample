@@ -26,8 +26,5 @@ extension UsersVC: UsersView {
     func showError(error: String) {
         print(error)
     }
-    
-    func navigateToUserDetailsScreen(user: User) {
-        navigationController?.pushViewController(UIViewController(), animated: true)
-    }
+
 }

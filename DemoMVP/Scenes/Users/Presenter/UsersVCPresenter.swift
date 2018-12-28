@@ -9,11 +9,11 @@
 import Foundation
 
 protocol UsersView: class {
+    var presenter: UsersVCPresenter? { get set }
     func showIndicator()
     func hideIndicator()
     func fetchingDataSuccess()
     func showError(error: String)
-    func navigateToUserDetailsScreen(user: User)
 }
 
 protocol UserCellView {
@@ -25,11 +25,14 @@ protocol UserCellView {
 class UsersVCPresenter {
     
     private weak var view: UsersView?
-    private let interactor = UsersInteractor()
+    private let interactor: UsersInteractor
+    private let router: UsersVCRouter
     private var users = [User]()
     
-    init(view: UsersView) {
+    init(view: UsersView?, interactor: UsersInteractor, router: UsersVCRouter) {
         self.view = view
+        self.interactor = interactor
+        self.router = router
     }
     
     func viewDidLoad() {
@@ -64,7 +67,7 @@ class UsersVCPresenter {
     
     func didSelectRow(index: Int) {
         let user = users[index]
-        view?.navigateToUserDetailsScreen(user: user)
+        router.navigateToUserDetailsScreen(from: view, user: user)
     }
     
 }
